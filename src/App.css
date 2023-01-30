@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@layer base {
+	html {
+		@apply font-sans;
+		font-family: "Karla", sanks-serif;
+	}
+	body {
+		@apply bg-slate-500 p-5;
+	}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+	.container {
+		@apply flex flex-col  h-screen min-w-full w-full;
+	}
+	.topSide {
+		@apply w-full  bg-white p-14;
+	}
 
-.App-link {
-  color: #61dafb;
-}
+	.topSideHeader {
+		@apply text-cyan-500 font-bold text-2xl mb-10 tracking-wide md:text-4xl sm:text-2xl xs:text-lg;
+	}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	.topSideSubHeader {
+		@apply text-yellow-300 font-semibold text-lg mb-5 tracking-wider md:text-lg sm:text-base xs:text-base;
+	}
+
+	.topSideParagh {
+		@apply text-gray-400 font-medium tracking-wide text-xl leading-10 md:text-xl sm:text-base xs:text-base;
+	}
+
+	.signUpButton {
+		@apply bg-lime-400 w-4/5 text-white text-center font-semibold text-lg 
+        tracking-wider mt-10 p-3 rounded-md py-4 drop-shadow-2xl hover:opacity-90;
+	}
+
+	.buttomSideHeaders {
+		@apply text-white font-semibold text-xl mb-10 tracking-wide;
+	}
+
+	.bottomParagh {
+		@apply text-gray-300 text-base tracking-widest leading-7;
+	}
 }
